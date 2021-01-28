@@ -416,7 +416,7 @@ Module: Core Extension Elements
 
 |[[EBXML-MSG]] Section 3.1.1.2 Role Element| All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
-| Header elements|/SOAP:Header/eb:MessageHeader/eb:From/eb:Role<br>/SOAP:Header/eb:MessageHeader/eb:To/eb:Role|
+| Header elements|`/SOAP:Header/eb:MessageHeader/eb:From/eb:Role`<br>`/SOAP:Header/eb:MessageHeader/eb:To/eb:Role`|
 | Are Roles defined for each party of each business process? List them, or provide a reference to the source of these values. Example – within the EAN•UCC system, approved values are specified by the EAN•UCC Message Service Implementation Guide. \<eb:Role\>http:/www.ean-ucc.org/roles/seller\</eb:Role\> | Business process is out of scope for (this version of the) Digikoppeling. Within a single contract (CPA) between two Partners: - A Partner **must** fulfill one and only one role (a Partner cannot change its role within one contract). - A Partner can send messages (one or more) and/or receive messages (one or more). In case a Partner wants to use different roles, different contracts (CPA's) must be used. |
 | Alignment | [Per-process; may reference Role values in BPSS [BPSS] definitions. Appears as Role/\@name in CPA.] |
 | Test References | (empty)  |
@@ -427,7 +427,7 @@ Module: Core Extension Elements
 
 |[[EBXML-MSG]] Section 3.1.2 CPAId Element | All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
-|Header elements|/SOAP:Header/eb:MessageHeader/eb:CPAId |
+|Header element(s)|`/SOAP:Header/eb:MessageHeader/eb:CPAId`|
 | What identification scheme is used for the CPAId, and what form should it take? If it is a URI, how is it constructed? Does it reference a real CPA, or is it just a symbolic identifier? Example – within the EAN•UCC system, the value of the CPAId is the concatenation of the Sender and Receiver GLNs followed by a four digit serial number. 1234567890128 - GLN Party A 3456789012340 - GLN Party B 0001 - CPA Number between parties A and B | The proposed EAN•UCC is recommended as a good practice. |
 | Alignment | Appears as CollaborationProtocolAgreement/\@cpaid in CPA.  |
 | Test References | (empty)  |
@@ -437,7 +437,7 @@ Module: Core Extension Elements
 
 |[[EBXML-MSG]] Section 3.1.3 ConversationId Element| All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
-|Header elements|/SOAP:Header/eb:MessageHeader/eb:ConversationId|
+|Header elements|`/SOAP:Header/eb:MessageHeader/eb:ConversationId`|
 | What is the user definition of a Conversation? What is the business criterion used to correlate messages considered parts of the same conversation?   | [EBXML-MSG] requires that request messages, response messages, and any acknowledgments and error messages have the same value for ConversationId. |
 | In case the MSH implementation gives exposure of the ConversationId as it appears in the header, what identification scheme should be used for its value, and what format should it have? If it is a URI, how is it constructed? In case the ConversationId is not directly exposed, but only a handle that allows applications to associate messages to conversations, if the value of this handle is under control of the application, what format should it have? | No recommendation made.  |
  If BPSS is used, ConversationId typically maps to a business transaction. Is that the case? Does it map to a business collaboration instead? | No recommendation made. Business process is out of scope for Digikoppeling. |
@@ -448,7 +448,7 @@ Module: Core Extension Elements
 
 |[[EBXML-MSG]] Section 3.1.6.1 | All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
-|Header elements|SOAP:Header/eb:MessageHeader/eb:MessageData/eb:MessageId|
+|Header elements|`/SOAP:Header/eb:MessageHeader/eb:MessageData/eb:MessageId`|
 | Although there is no requirement for an MSH to give control about MessageId to an application, some implementations may allow this. In this case, is there any requirement on the source of this ID? Any length and format restrictions when the ID is generated? | No recommendation made. The value of MessageId does not need to meet any requirements beyond the string format specified in [EBXML-MSG] and the global uniqueness constraint of [[rfc5322]]. |
 | Alignment | (empty) | 
 | Test References | (empty)| 
@@ -458,7 +458,7 @@ Module: Core Extension Elements
 
 |[[EBXML-MSG]] Section 3.1.4 Service Element| All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
-|Header elements|/SOAP:Header/eb:MessageHeader/eb:Service<br>**/SOAP:Header/eb:MessageHeader/eb:Service/\@type**|
+|Header elements|`/SOAP:Header/eb:MessageHeader/eb:Service`<br>`/SOAP:Header/eb:MessageHeader/eb:Service/\@type`|
 | Are Services (related groups of Actions) defined for each party of each business process? List them, or provide a reference to the source of these values. [Per-process; absent from BPSS definitions.] Is there a URI format scheme for this element? | No recommendation made.   |
 | Is there a defined "type" for Service elements? If so, what value must the type attribute contain?  | The text content of the Service element **must not** contain white space. |
 | Alignment | Appears as Service element in CPA Appears as Service/\@type in CPA | 
@@ -469,7 +469,7 @@ Module: Core Extension Elements
 
 |[[EBXML-MSG]] Section 3.1.5 Action Element| All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
-|Header elements|/SOAP:Header/eb:MessageHeader/eb:Action|
+|Header elements|`/SOAP:Header/eb:MessageHeader/eb:Action`|
 | Are actions defined for each party to each business process? List them, or provide a reference to the source of these values. [Per-process; may reference BusinessAction values in BPSS definitions. Example – within the EAN•UCC system, approved values are specified by the EAN•UCC Message Service Implementation Guide. \<eb:Action\>Confirmation\</eb:Action\> | No recommendation made. |
 | Alignment | Appears as ThisPartyActionBinding/\@action in CPA.]   | 
 | Test References | (empty) |
@@ -483,7 +483,7 @@ This item is no longer required.
 
 |[[EBXML-MSG]] Section 3.1.8 Description Element | All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
-|Header elements|/SOAP:Header/eb:MessageHeader/eb:Description |
+|Header elements|`/SOAP:Header/eb:MessageHeader/eb:Description` |
 | Are one or more Message Header Description elements required? In what language(s)? Is there a convention for its contents? | No recommendation made. Description elements are not required. Message handlers **may** ignore Description elements. |
 | Alignment |(empty) |
 | Test References | (empty) |
@@ -493,7 +493,7 @@ This item is no longer required.
 
 |[[EBXML-MSG]] Section 3.2.2 Manifest Validation| All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
-|Header elements|/SOAP:Body/eb:Manifest|
+|Header elements|`/SOAP:Body/eb:Manifest`|
 | How many Manifest elements must be present, and what must they reference? Does the order of Manifest elements have to match the order of the referenced MIME attachments? Any restriction on the range of value for xlink:reference (e.g. nothing other than content id references)? | Manifest elements **must** only reference business documents or other payloads that are included in the ebXML message as a MIME part allows for references to external message payloads (for instance, using HTTP URIs), which are logically part of the message, but not as a physical entity in the MIME envelope. This is **never used** in these profiles. |
 | Must a URI whichcannot be resolved be reported as an error?  | A Content Id URI reference that cannot be resolved **must** be treated as an error. |
 | Alignment | (empty) | 
@@ -504,7 +504,7 @@ This item is no longer required.
 
 |[[EBXML-MSG]] Section 3.2.1 Reference Element| All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
-|Header elements|/SOAP:Body/eb:Manifest/eb:Reference |
+|Header element(s)|`/SOAP:Body/eb:Manifest/eb:Reference`|
 | Is the xlink:role attribute required? What is its value? | **Not applicable**. The xlink:role attribute is not required.   |
 | Are any other namespace-qualified attributes required?   | **Not applicable**. No other namespace-qualified attributes are allowed. |
 | Alignment | (empty) | 
@@ -515,7 +515,7 @@ This item is no longer required.
 
 |[[EBXML-MSG]] | All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
-|Header elements|/SOAP:Body/eb:Manifest/eb:Reference/eb:Schema|
+|Header element(s)|`/SOAP:Body/eb:Manifest/eb:Reference/eb:Schema`|
 | Are there any Schema elements required? If so, what are their location and version attributes?  | Schema elements are not required. Digikoppeling does not perform XML schema validation. |
 | Alignment | (empty) | 
 | Test References | (empty) |
@@ -525,7 +525,7 @@ This item is no longer required.
 
 |[[EBXML-MSG]] Section 3.2.1.2 Description Element | All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
-|Header elements|/SOAP:Body/eb:Manifest/eb:Reference/eb:Description|
+|Header element(s)|`/SOAP:Body/eb:Manifest/eb:Reference/eb:Description`|
 | Are any Description elements required? If so, what are their contents?   | Description elements are optional. They **may** be ignored by any receiving message service handler. |
 | Alignment | (empty) | 
 | Test References | (empty) |
@@ -555,7 +555,7 @@ Module: Security
 
 |[[EBXML-MSG]] Section 4.1.4.2 Persistent Signed Receipt| **Best effort**<br>**Reliable Messaging**|**End-to-End Security** |
 |------------------|---|---|
-|Header elements:<br>/SOAP:Header/eb:Signature|||
+|Header elements:<br>`/SOAP:Header/eb:Signature`|||
 | Is a digitally signed Acknowledgment Message required? [Yes, for Security Services Profiles 7, 8, 10, 12, 14, 15, 17, 19-21. See the items beginning with Section 4.1.4.1 for specific Signature requirements.] | **Not applicable**.  | Signing acknowledgements is **required**. |
 | If so, what is the Acknowledgment or Receipt schema?   | **Not applicable**.  | [[xmldsig-core-20020212]]  |   |
 | Alignment | Appears as BusinessTransactionCharacteristics/\@isNonRepudiationReceiptRequired=persistent in CPA.  | |
@@ -576,7 +576,7 @@ Module: Security
 
 |[[EBXML-MSG]] Section 4.1.4.4 Non Persistent Integrity| All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
-|Header elements|/SOAP:Header/eb:Signature|
+|Header element(s)|`/SOAP:Header/eb:Signature`|
 | Are communication channel integrity methods required? [Yes, for Security Services Profile 4.] Which methods are allowed or required? | **Not applicable**  |
 | Alignment | [Appears as BusinessTransactionCharacteristics/\@isTamperproof=transient in CPA.] |
 | Test References | (empty) |
@@ -586,7 +586,7 @@ Module: Security
 
 |[[EBXML-MSG]] Section 4.1.4.1 Section 4.1.4.5 Persistent Confidentiality| **Best effort**<br>**Reliable Messaging**|**End-to-End Security** |
 |------------------|---|---|
-|Header elements:<br>/SOAP:Header/eb:Signature|||
+|Header elements:<br>`/SOAP:Header/eb:Signature`|||
 | Is selective confidentiality of elements within an ebXML Message SOAP Header required? If so, how is this to be accomplished? [Not addressed by Messaging Specification 2.0.] | **Not applicable**.  | **Not applicable**. | Is payload confidentiality (encryption) required? [Yes, for Security Services Profiles 13, 14, 16, 17, 21, 22.] Which methods are allowed or required?   | **Not applicable**.  | Payload confidentiality is **optional**. The [[Digikoppeling Beveiligingsdocument]] describes what security standard must be used. | 
 | Alignment | [Appears as BusinessTransactionCharacteristics/\@isConfidential=persistent in CPA.]   |  
 | Test References | (empty)| (empty)  | 
@@ -596,7 +596,7 @@ Module: Security
 
 |[[EBXML-MSG]] Section 4.1.4.6 Non Persistent Confidentiality| All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
-|Header elements|/SOAP:Header/eb:Signature|
+|Header element(s)|`/SOAP:Header/eb:Signature`|
 | Are communication channel confidentiality methods required? [Yes, for Security Services Profiles 3, 6, 8, 11, 12.] Which methods are allowed or required? | The use of HTTPS and TLS is required. The currently allowed protocol versions for TLS are described in the [[Digikoppeling Beveiligingsdocument]] Message service handlers **should NOT** support SSL v3 compatibility mode. |
 | Alignment | [Appears as BusinessTransactionCharacteristics/\@isConfidential=transient in CPA.]   | |
 | Test References | (empty) |
@@ -606,7 +606,7 @@ Module: Security
 
 |[[EBXML-MSG]] Section 4.1.4.7 Persistent Authorization| All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
-|Header elements|/SOAP:Header/eb:Signature|
+|Header element(s)|`/SOAP:Header/eb:Signature`|
 | Are persistent authorization methods required? [Yes, for Security Services Profiles 18-21.] Which methods are allowed or required? | **Not applicable**  |
 | Alignment | [Appears as BusinessTransactionCharacteristics/\@isAuthorizationRequired=persistent in CPA.]   |  
 | Test References | (empty) |
@@ -617,7 +617,7 @@ Module: Security
 
 |[[EBXML-MSG]] Section 4.1.4.8 Non Persistent Authorization | All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
-|Header elements|/SOAP:Header/eb:Signature|
+|Header element(s)|`/SOAP:Header/eb:Signature`|
 | Are communication channel authorization methods required? [Yes, for Security Services Profile 2.] Which methods are allowed or required? | TLS client and server authentication is **required** as described in section in 4.2.3. |
 | Alignment | [Appears as BusinessTransactionCharacteristics/\@isAuthorizationRequired=transient in CPA.] | |
 | Test References | (empty) |
@@ -627,7 +627,7 @@ Module: Security
 
 |[[EBXML-MSG]] Section 4.1.4.9 Trusted Timestamp | All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
-|Header elements|/SOAP:Header/eb:Signature|
+|Header element(s)|`/SOAP:Header/eb:Signature`|
 | Is a trusted timestamp required? [Yes, for Security Services Profiles 9-12, 15-17, 20, 21.] If so, provide details regarding its usage. | **Not applicable**   |
 | Alignment | (empty) | 
 | Test References | (empty) |
@@ -640,7 +640,7 @@ Module : Error Handling
 
 |[[EBXML-MSG]] Section 4.2.3.2 Error Element | All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
-|Header elements|/SOAP:Header/eb:ErrorList/eb:Error<br> /SOAP:Header/eb:ErrorList/ eb:Error/\@codeContext<br> /SOAP:Header/eb:ErrorList/ eb:Error/\@errorCode|
+|Header elements|`/SOAP:Header/eb:ErrorList/eb:Error`<br> `/SOAP:Header/eb:ErrorList/ eb:Error/\@codeContext`<br> `/SOAP:Header/eb:ErrorList/ eb:Error/\@errorCode`|
 | Is an alternative codeContext used? If so, specify   | **Not applicable**  |
 | If an alternative codeContext is used, what is its errorCode list?  |  |
 | Profiling (c)   | When errors should be reported to the sending application, how should this be notified (e.g. using a logging mechanism or a proactive callback)?  | **Not applicable**  |
@@ -655,7 +655,7 @@ Module : SyncReply
 
 |[[EBXML-MSG]] Section 4.3 SyncReply| **Best effort**|**Reliable Messaging**|**End-to-End Security** |
 |------------------|---|---|---|
-|Header elements<br>SOAP:Header/eb:SyncReply||||
+|Header elements:<br>`SOAP:Header/eb:SyncReply`||||
 | Is SyncReply mode allowed, disallowed, or required, and under what circumstances? [May be process-specific.]  | **Not applicable**.   | SyncReply is restricted to **none** (default) or **mshSignalsOnly** (on condition) Condition for usage of msghSignalsOnly mode is: both parties MSH are able to activate syncReplyMode=msghSignalsOnly see also [Best Practice]| See profile Best Effort or profile Reliable Messaging for details |
 | If SyncReply mode is used, are MSH signals, business messages or both expected synchronously?  | **Not applicable** | If SyncReply mode used only MSH signals are expected synchronously  | See profile Reliable Messaging for details   |
 | Alignment | [Affects setting of 6.4.7 syncReplyMode element. Appears as MessagingCharacteristics/\@syncReplyMode in CPA.] | |   | |
@@ -670,7 +670,7 @@ Module : Reliable Messaging
 
 |[[EBXML-MSG]] Section 6.3.1.1 SOAP Actor attribute | **Best effort**|**Reliable Messaging**|**End-to-End Security** |
 |------------------|---|---|---|
-|Header elements<br>/SOAP:Header/eb:AckRequested/  ||||
+|Header elements:<br>/SOAP:Header/eb:AckRequested/  ||||
 | SOAP Actor attribute: Are point-to-point (nextMSH) MSH Acknowledgments to be requested? [Yes, for RM Combinations 1, 3, 5, 7; refer to ebMS section 6.6. Appears as MessagingCharacteristics/\@ackRequested with \@actor=nextMSH in CPA.] | **Not applicable**.  |**Not applicable** | **Not applicable**  |
 | Are end-to-end (toParty) MSH Acknowledgments to be requested? [Yes, for RM Combinations 1, 2, 5, 6. Appears as MessagingCharacteristics/\@ackRequested with \@actor=toPartyMSH in CPA.]   | **Not applicable**.  | It is **required** that the final recipient MSH returns a receipt acknowledgment message. | **Optional**: See profiles Best Effort or Reliable Messaging for details. |
 | Test References | (empty) |||
@@ -680,7 +680,7 @@ Module : Reliable Messaging
 
 |[[EBXML-MSG]] Section 6.3.1.2 Signed attribute| All profiles:<br> **Best effort**<br>**Reliable Messaging**|**End-to-End Security** |
 |------------------|---|---|
-|Header elements<br>/SOAP:Header/eb:AckRequested/|||
+|Header elements:<br>`/SOAP:Header/eb:AckRequested`/|||
 | Must MSH Acknowledgments be (requested to be) signed?  | **Not applicable**.  | **Not applicable**.| Signing of acknowledgements is **required**. |   |
 | Alignment | [Appears as MessagingCharacteristics/ \@ackSignatureRequested in CPA.]   |   | 
 | Test References | (empty) ||
@@ -690,7 +690,7 @@ Module : Reliable Messaging
 
 |[[EBXML-MSG]] Section 6.4.1 | **Best effort**|**Reliable Messaging**|**End-to-End Security** |
 |------------------|---|---|---|
-|Header elements<br>/SOAP:Header/eb:AckRequested/  ||||
+|Header elements:<br>`/SOAP:Header/eb:AckRequested/`  ||||
 | Is elimination of duplicate messages required? [Yes, for RM Combinations 1-4.] | Duplicate Elimination is **never used**.  | Duplicate Elimination is **required** | Duplicate Elimination is optional. See profiles Best Effort or Reliable Messaging for details. |
 | What is the expected scope in time of duplicate elimination? In other words, how long should messages or message ID's be kept in persistent storage for this purpose? |  (empty) | Message ID's **should** minimally be kept in persistent storage to prevent duplicate delivery during the time interval in which the From Party MSH may be attempting to resend unacknowledged messages. The minimum is (1+Retries)\*RetryInterval.   | (empty)  |
 | Alignment | Appears as MessagingCharacteristics/ \@duplicateElimination in CPA |   |   |   |
@@ -701,7 +701,7 @@ Module : Reliable Messaging
 
 |[[EBXML-MSG]]Section 6.4.3, 6.4.4 Retries and RetryInterval | **Best effort**|**Reliable Messaging**|**End-to-End Security** |
 |------------------|---|---|---|
-|Header elements<br>/SOAP:Header/eb:AckRequested/ ||||
+|Header elements:<br>`/SOAP:Header/eb:AckRequested/` ||||
 | (a) If reliable messaging is used, how many times must an MSH attempt to redeliver an unacknowledged message? <br> (b) What is the minimum time a Sending MSH should wait between retries of an unacknowledged message?  | **Not applicable** | Some organizations using the Digikoppeling may not have 24x7 support for their ebXML Messaging services. A system crash may not be remedied until the next working day. Where possible, the values of Retries and RetryInterval **should** be set to allow reliable delivery of messages even after prolonged unavailability. If no value is defined by the parties, a value of 5 days is used. | Depends on the use of best effort or reliable messaging. |
 | Alignment | (a) [Appears as ReliableMessaging/Retries in CPA.] (b) [Appears as ReliableMessaging/RetryInterval in CPA.] | | | |
 | Test References | (empty) || | |
@@ -720,7 +720,7 @@ Module : Reliable Messaging
 
 |[[EBXML-MSG]]Section 6.5.3, 6.5.7 | **Best effort**|**Reliable Messaging**|**End-to-End Security** |
 |------------------|---|---|---|
-| Usage: \<required / optional / never used in this profile\> Profiled: \<yes / no\>   | **Never** used in this profile.   | The Reliable Messaging Protocol in [[EBXML-MSG]] must be used.   | **Optional** in this profile: depends on the use of best effort or reliable messaging. |
+| Usage: required/optional/never used in this profile, Profiled: yes / no   | **Never** used in this profile.   | The Reliable Messaging Protocol in [[EBXML-MSG]] must be used.   | **Optional** in this profile: depends on the use of best effort or reliable messaging. |
 | Must a response to a received message be included with the acknowledgment of the received message? Are they to be separate, or are both forms allowed? | **Not applicable**  | Receipt acknowledgment messages are standalone messages. They **must** not to be bundled with business response messages or other ebXML messages. | |
 | If a DeliveryFailure error message cannot be delivered successfully, how must the error message's destination party be informed of the problem?  | Each collaborating party is responsible for defining procedures for handling these issues. |   | |
 | Alignment | (empty) | ||
@@ -734,7 +734,7 @@ Module : Message Status
 
 |[[EBXML-MSG]] Section 7.1.1 Message Status Request| All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
-|Header elements|Eb:MessageHeader/eb:StatusRequest|
+|Header element(s)|`Eb:MessageHeader/eb:StatusRequest`|
 | If used, must Message Status Request Messages be digitally signed?   | **Not applicable**. |
 | Must unauthorized Message Status Request messages be ignored, rather than responded to, due to security concerns? | **Not applicable**. |
 | Alignment | (empty) | 
@@ -745,7 +745,7 @@ Module : Message Status
 
 |[[EBXML-MSG]]  Section 7.1.2 Message Status Response| All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
-|Header elements|Eb:MessageHeader/eb:StatusResponse|
+|Header element(s)|`Eb:MessageHeader/eb:StatusResponse`|
 | If used, must Message Status Response Messages be digitally signed?   | **Not applicable**. |
 | Alignment | (empty) | 
 | Test References | (empty) |
@@ -758,7 +758,7 @@ Module : Ping Service
 
 |[[EBXML-MSG]] Section 8.1, 8.2 Message Service Handler Ping/Pong Message | All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
-|Header elements|Eb:MessageHeader/eb:Service Eb:MessageHeader/eb:Action|
+|Header element(s)|`Eb:MessageHeader/eb:Service`|
 | If used, must Ping Messages be digitally signed? | If Ping-Pong is used, it is **optional** for Ping messages to be digitally signed. |
 | If used, must Pong Messages be digitally signed? | If Ping-Pong is used, it is **optional** for Pong messages to be digitally signed. |
 | Under what circumstances must a Pong Message not be sent? | No recommendation made.   |
@@ -785,7 +785,7 @@ Module : Multi-Hop
 
 |[[EBXML-MSG]] Section 10.1.1, 10.1.3| All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
-|Header elements|Eb:MessageHeader/|
+|Header element(s)|`Eb:MessageHeader/`|
 | Must each intermediary request acknowledgment from the next MSH? | **Not applicable**. There is **no support** for ebXML next MSH acknowledgments. |
 | Must each intermediary return an Intermediate Acknowledgment Message synchronously?   | **Not applicable**. There is **no support** for ebXML next MSH acknowledgments. |
 | If both intermediary (multi-hop) and endpoint acknowledgments are requested of the To Party, must they both be sent in the same message? | **Not applicable**. There is **no support** for ebXML next MSH acknowledgments. |
@@ -878,8 +878,8 @@ SMTP Binding
 |[[EBXML-MSG]] Appendix B.3.2 Sending ebXML Messages over SMTP| All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
 | Is any specific content-transfer-encoding required, for MIME body parts which must conform to a 7-bit data path? [Base64 or quoted-printable, for example.] | **Not applicable**. This specification only supports the HTTP transport protocol. |
-| Profiling (b)   | If other than "ebXML" what must the SOAPAction SMTP header field contain?  | **Not applicable**. This specification only supports the HTTP transport protocol. |
-| Profiling (c)   | What additional MIME headers must be included amongst the SMTP headers? | **Not applicable**. This specification only supports the HTTP transport protocol. |
+| If other than "ebXML" what must the SOAPAction SMTP header field contain?  | **Not applicable**. This specification only supports the HTTP transport protocol. |
+| What additional MIME headers must be included amongst the SMTP headers? | **Not applicable**. This specification only supports the HTTP transport protocol. |
 | Alignment | (empty) | 
 | Test References | (empty) |
 | Notes  | (empty) |
@@ -891,7 +891,7 @@ Profile Requirement Item: SMTP Confidentiality and Security
 |------------------|---|
 |Header elements|MIME parts |
 | What SMTP access control mechanisms are required? [Refer to item 4.1.4.8 in Security section.] | **Not applicable**. This specification only supports the HTTP transport protocol. |
-| Profiling (b)   | Is transport-layer security required for SMTP, and what are the specifics of its use? [Refer to item 4.1.4.6 in Security section.] | **Not applicable**. This specification only supports the HTTP transport protocol. |
+| Is transport-layer security required for SMTP, and what are the specifics of its use? [Refer to item 4.1.4.6 in Security section.] | **Not applicable**. This specification only supports the HTTP transport protocol. |
 | Alignment | (empty) | 
 | Test References | (empty) |
 | Notes  | (empty) |
@@ -918,13 +918,12 @@ Security Profile
 
 || All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
-| Which security profiles are used, and under what circumstances (for which Business Processes)? [Refer to Appendix C of Message Service Specification. May be partially captured by BPSS isConfidential, is Tamperproof, isAuthenticated definitions.] | Security profile 3 [ebMS 2.0] Appendix C]: “Sending MSH authenticates and both MSHs negotiate a secure channel to transmit data” **must be** applied. The HTTPS connection uses encryption to provide in transit confidentiality regarding the complete ebXML message and performs **both** certificate-based Client and Server authentication during the TLS handshake. |  |   |
-| |  | Security profile 8 [ebMS 2.0 Appendix C] **must be** used: “Sending MSH applies XML/DSIG structures to message and passes in a secure communications channel. Sending MSH applies XML/DSIG structures to send messagesand Receiving MSH returns a signed receipt.” Security profile 14 [ebMS 2.0 Appendix C] is **optional**: “Sending MSH applies XML/DSIG structures to message **and** applies confidentiality structures (XML-Encryption) and Receiving MSH returns a signed receipt”. |   |
+| Which security profiles are used, and under what circumstances (for which Business Processes)? [Refer to Appendix C of Message Service Specification. May be partially captured by BPSS isConfidential, is Tamperproof, isAuthenticated definitions.] | Security profile 3 [ebMS 2.0] Appendix C]: “Sending MSH authenticates and both MSHs negotiate a secure channel to transmit data” **must be** applied. The HTTPS connection uses encryption to provide in transit confidentiality regarding the complete ebXML message and performs **both** certificate-based Client and Server authentication during the TLS handshake. | Security profile 8 [ebMS 2.0 Appendix C] **must be** used: “Sending MSH applies XML/DSIG structures to message and passes in a secure communications channel. Sending MSH applies XML/DSIG structures to send messagesand Receiving MSH returns a signed receipt.” Security profile 14 [ebMS 2.0 Appendix C] is **optional**: “Sending MSH applies XML/DSIG structures to message **and** applies confidentiality structures (XML-Encryption) and Receiving MSH returns a signed receipt”. |
 | (section 4.1.5) Are any recommendations given, with respect to protection or proper handling of MIME headers within an ebXML Message?  | **Not applicable**. No additional recommendations made. |  |   |
 | Are any specific third-party security packages approved or required? | No recommendation made.  |  |   |
 | Whichsecurity and management policies and practices are recommended? | Pending.  |  |   |
 | Any particular procedure for doing HTTP authentication, e.g. if exchanging name and password, how? | Besides the client authentication in HTTPS, no additional procedures are applied. |  |   |
-| Others   |  |  
+| Others   | (empty) |  
 
 Reliability Profile
 -------------------
