@@ -7,8 +7,8 @@ var respecConfig = {
   // EO: Einde ondersteuning, verouderde versie, vervangen door nieuwe versie
   // TG: Versie teruggetrokken
   // BASIS, GN-BASIS: 'geen status'
+  specStatus: "DEF",
 
-  specStatus: "WV",
   // SpecType currently supported
   // NO: "Norm"
   // ST: "Standaard"
@@ -19,36 +19,33 @@ var respecConfig = {
   // AL: "Algemeen"
   // BD: "Beheerdocumentatie"
   // BP: "Best Practice"
-  specType: "HR",
+  specType: "ST",
 
   // subtitle will be shown below title, can be omitted 
-  subtitle: "Hier komt een subtitle",
+  //subtitle: "Hier komt een subtitle",
 
   // The specification's "short name", which is the name used in NL_Respec URLs
-  shortName: "API-Design-Rules",
+  shortName: "digikoppeling",
+
+  publishDate: "2019-05-16",
 
   // An array of person objects describing the editors of the document
   // this can be simple or more elaborated
   editors: [{
-    name: "Peter Haasnoot",
-    url: "https://logius.nl/standaarden",
-  },
-  {
-    name: "Pieter Hering",
-    mailto: "api@digikoppeling.nl",
+    name: "Logius Centrum voor Standaarden",
     company: "Logius",
-    companyURL: "https://logius.nl/standaarden",
+    url: "https://logius.nl/standaarden",
   }
   ],
   // An array of person objects describing the authors of the document
   // this can be simple or more elaborated
   authors: [{
-    name: "Pieter Hering",
+    name: "Logius Centrum voor Standaarden",
     url: "https://logius.nl/standaarden",
   }
   ],
   // The github option allows you associate your specification with a repository on GitHub.
-  github: "https://github.com/Logius-standaarden/Template-Repository",
+  github: "https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2",
 
   // The URL of your test suite, gets included in the specification's headers.
   // testSuiteURI: "https://portaal.digikoppeling.nl/CV/home.html",
@@ -63,7 +60,7 @@ var respecConfig = {
   a11y: false,
 
   // A number indicating the maximum depth of the table of contents. Defaults to 0 which includes all levels.
-  // maxTocLevel: 3,
+  maxTocLevel: 4,
 
   // Shows links to alternate formats (such as PDF, ePub) in the document header.
   // alternateFormats: [{
@@ -84,22 +81,22 @@ var respecConfig = {
 
   // The specification's publish domain, which is used to publish the specification
   // the url in the header thisVersion is generated like `<conf.nl_organisationPublishURL>/<conf.pubDomain>/<specStatus>-<specType.toLowerCase()>-<conf.shortName>}-conf.publishDate>/`
-  pubDomain: "adr",
+  pubDomain: "dk",
 
   // For Consultatieversies (specStatus="GN-CV") there is a default text in the section "Status of this document" that contains an emailaddress for feedback and comments on the document.
   nl_emailComments: "digikoppeling@logius.nl",
 
   // if you use a single document for your spec, which uses more than one markdown H1 header, e.g. '# inleiding'
   // this configuration can be set to make sure that the alle H1 headers and navigation bars are preserved
-  nl_markdownSplitH1sections: false,
+  nl_markdownSplitH1sections: true,
 
   // in some cases the Repository of a Specification document and the Issue- and PR bases are split
   // thi scan be configured below
   // if not set, the url's will be generated on the respecConfig.github automatically  
   nl_github: {
-    issueBase: "https://github.com/Geonovum/KP-APIs/issues",
-    revision: "https://github.com/Logius-standaarden/API-Design-Rules/commits",
-    pullrequests: "https://github.com/Logius-standaarden/API-Design-Rules/pulls"
+    // issueBase: "https://github.com/Geonovum/KP-APIs/issues",
+    revision: "https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2/commits",
+    // pullrequests: "https://github.com/Logius-standaarden/API-Design-Rules/pulls"
   },
 
   // nl_organisationName is used for some company specific values in the header (and Sotd)
@@ -112,7 +109,7 @@ var respecConfig = {
 
   // class style can be automatically insertd in generated markdown tables
   // currently defaults to simple, but this may change    
-  nl_markdownTableClass: "simple",
+  nl_markdownTableClass: "ebms",
 
   // if nl_markdownEmbedImageInFigure is set to true images in markdown generated content will be surrounded with <figures> element
   // so that figures can be linked are be a part of table of figures
@@ -121,7 +118,6 @@ var respecConfig = {
   // this url points to the folder where organsation specific css files are stored
   // defaults to https://tools.geostandaarden.nl/respec/style/ if not set
   nl_organisationStylesURL: "https://publicatie.centrumvoorstandaarden.nl/respec/style/",
-  // nl_organisationStylesURL: "http://localhost:8081/respec/style/",
 
   // nl_organisationPublishURL points to organisation specifica publication page, used in header
   // defaults to  https://docs.geostandaarden.nl/"
@@ -149,6 +145,68 @@ var respecConfig = {
       date: "Maart 2011",
       publisher: "Nederlands Normalisatie-instituut",
     },
-  },
+    "Digikoppeling Architectuur": {
+      href: "https://centrumvoorstandaarden.github.io/Architectuur2.0-metRestfulAPI/static.html",
+      title:
+        "Digikoppeling Architectuur",
+      authors: ["Logius Centrum voor standaarden"],
+      date: "december 2020",
+      publisher: "Logius",
+    },
+    "ebXML CPPA V 2.0": {
+      href: "http://www.ebxml.org/specs/ebcpp-2.0.pdf",
+      title:
+        "Collaboration-Protocol Profile and Agreement Specification Version 2.0",
+      authors: ["Oasis"],
+      date: "september 2002",
+      publisher: "Oasis",
+    },
+    ebMS3: {
+      href: "https://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/os/ebms_core-3.0-spec-os.html",
+      title:
+        "Collaboration-Protocol Profile and Agreement Specification Version 2.0",
+      authors: ["Ian Jones", "Pete Wenzel"],
+      date: "October 2007",
+      publisher: "Oasis",
+    },
+    UMMR10: {
+      href: "https://unece.org/DAM/cefact/umm/UMM_Revision_10_2001.zip",
+      title: "UMM Revision 10",
+      authors: [""],
+      date: "2001",
+      publisher: "UN/CEFACT",
+    },
+    UMMUG: {
+      href: "www.unece.org/fileadmin/DAM/cefact/umm/UMM_userguide_220606.pdf",
+      title: "UN/CEFACT Modeling Methodology (UMM) User Guide",
+      authors: [""],
+      date: "2003",
+      publisher: "UN/CEFACT",
+    },
+    "Digikoppeling Beveiligingsdocument": {
+      href: "https://www.logius.nl/sites/default/files/bestanden/website/Digikoppeling_Beveiligingsstandaarden_en_voorschriften_v1.3.pdf",
+      title: "Digikoppeling Beveiligingsstandaarden en voorschriften",
+      date: "2020",
+      publisher: "Logius",
+    },
+    "Deployment Guide 1.1": {
+      href: "http://www.oasis-open.org/apps/org/workgroup/ebxml-iic-deployment-profile-template-intro-100406.doc",
+      title: "Deployment Profile Template For OASIS ebXML Message Service 2.0",
+      authors: ["Pete Wenzel", "Jacques Durand"],
+      date: "June 2005",
+      publisher: "OASIS",
+    },
+    "PKI Policy": {
+      href: "https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/pogramma-van-eisen",
+      title: "Programma van Eisen (PKIoverheid)",
+      publisher: "Logius",
+    },
+    "PKI CA": {
+      href: "https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/toegetreden-vertrouwensdienstverleners",
+      title: "Toegetreden vertrouwensdienstverleners",
+      publisher: "Logius",
+    }
+    
+  }
 
 };

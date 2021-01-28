@@ -1,3 +1,1 @@
-# Template-Standaard
-
-https://logius-standaarden.github.io/Template-Repository/
+# Digikoppeling Koppelvlakstandaard ebMS2
