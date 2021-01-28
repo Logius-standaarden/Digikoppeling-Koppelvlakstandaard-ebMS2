@@ -29,9 +29,7 @@ Opbouw Digikoppeling documentatie
 Digikoppeling is beschreven in een set van documenten. Deze set is als volgt
 opgebouwd:
 
-![Digikoppeling Standaard](media/DK_Specificatie_structuur.png "Digikoppeling standaard")
-
-Figuur 1: Opbouw documentatie Digikoppeling
+![Opbouw documentatie Digikoppeling](media/DK_Specificatie_structuur.png "Opbouw documentatie Digikoppeling")
 
 Doel en scope van Digikoppeling 
 --------------------------------
