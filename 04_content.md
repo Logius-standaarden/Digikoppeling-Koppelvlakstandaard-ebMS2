@@ -539,7 +539,7 @@ Module: Security
 |Header elements:<br>SOAP:Header/Signature|||
 | (a) Must messages be digitally signed? [Yes, for Security Services Profiles 1, 6-21.]  | ****Not applicable****. These profiles do not support XML Digital Signatures at the message handler level.| **Required** in this profile.   | 
 | Are additional Signature elements required, by whom, and what should they reference?  | **Not applicable**.   | **Never used** in this profile. |   |
-| What canonicalization method(s) must be applied to the data to be signed? | **Not applicable**.   | The use of XML canonicalization is **required**. [[[xml-exc-c14n]]] |
+| What canonicalization method(s) must be applied to the data to be signed? | **Not applicable**.   | The use of XML canonicalization is **required**. [[xml-exc-c14n]] |
 | What canonicalization method(s) must be applied to each payload object, if different from above?  | **Not applicable**.   | **Not applicable**.  |
 | What signature method(s) must be applied?   | **Not applicable**.   | The applied signature method is described in [[Digikoppeling Beveiligingsdocument]]  |   |
 | What Certificate Authorities (issuers) are allowed or required for signing certificates? | **Not applicable**.   | The use of PKI Overheid certificates is **required** in which an OIN is used in the Subject.serialNumber. [[Digikoppeling Beveiligingsdocument]] |   |

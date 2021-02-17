@@ -78,6 +78,15 @@ var respecConfig = {
   // TODO  Do not suse this config, it may cause a problem., use instead:
   // <section data-format="markdown" data-include="<filename>.md"></section>
 
+  alternateFormats: [{
+    label: "(static) html",
+    uri: "snapshot.html",
+  },
+  {
+    label: "pdf",
+    uri: "Digikoppeling-Koppelvlakstandaard-ebMS2.pdf",
+  },
+  ],
 
   // The specification's publish domain, which is used to publish the specification
   // the url in the header thisVersion is generated like `<conf.nl_organisationPublishURL>/<conf.pubDomain>/<specStatus>-<specType.toLowerCase()>-<conf.shortName>}-conf.publishDate>/`
@@ -87,7 +96,7 @@ var respecConfig = {
   // For Consultatieversies (specStatus="GN-CV") there is a default text in the section "Status of this document" that contains an emailaddress for feedback and comments on the document.
   nl_emailComments: "digikoppeling@logius.nl",
 
-    // this parameter will add the tag_name of the latest release to the document Title
+  // this parameter will add the tag_name of the latest release to the document Title
   // only set this parameter when a release has been set
   nl_addReleaseTagTitle: true,
 
@@ -211,7 +220,7 @@ var respecConfig = {
       title: "Toegetreden vertrouwensdienstverleners",
       publisher: "Logius",
     }
-    
+
   }
 
 };
