@@ -22,12 +22,21 @@ var respecConfig = {
   specType: "ST",
 
   // subtitle will be shown below title, can be omitted 
-  //subtitle: "Hier komt een subtitle",
+  //subtitle: "",
+
+   // The specification's publish domain, which is used to publish the specification
+  // the url in the header thisVersion is generated like `<conf.nl_organisationPublishURL>/<conf.pubDomain>/<specStatus>-<specType.toLowerCase()>-<conf.shortName>}-conf.publishDate>/`
+  pubDomain: "dk",
 
   // The specification's "short name", which is the name used in NL_Respec URLs
   shortName: "ebms",
 
   publishDate: "2019-05-16",
+  //previousPublishDate: "2019-05-16",
+
+  publishVersion: "3.3",
+  // previousPublishVersion: "3.2",
+
 
   // An array of person objects describing the editors of the document
   // this can be simple or more elaborated
@@ -78,20 +87,13 @@ var respecConfig = {
   // TODO  Do not suse this config, it may cause a problem., use instead:
   // <section data-format="markdown" data-include="<filename>.md"></section>
 
-  alternateFormats: [{
-    label: "(static) html",
-    uri: "snapshot.html",
-  },
+  alternateFormats: [
   {
     label: "pdf",
     uri: "Digikoppeling-Koppelvlakstandaard-ebMS2.pdf",
   },
   ],
 
-  // The specification's publish domain, which is used to publish the specification
-  // the url in the header thisVersion is generated like `<conf.nl_organisationPublishURL>/<conf.pubDomain>/<specStatus>-<specType.toLowerCase()>-<conf.shortName>}-conf.publishDate>/`
-  pubDomain: "dk",
-  pubSubDomain: "ebms",
 
   // For Consultatieversies (specStatus="GN-CV") there is a default text in the section "Status of this document" that contains an emailaddress for feedback and comments on the document.
   nl_emailComments: "digikoppeling@logius.nl",

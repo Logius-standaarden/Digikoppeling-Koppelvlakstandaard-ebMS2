@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="nl"><head>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 26.0.0">
+<meta name="generator" content="ReSpec 26.4.0">
 <style>
 dfn{cursor:pointer}
 .dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font:small Helvetica Neue,sans-serif,Droid Sans Fallback;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
@@ -264,6 +264,26 @@ aanbieders als service afnemers.">
       }
     },
     {
+      "id": "https://www.w3.org/TR/xml-exc-c14n/",
+      "type": "TechArticle",
+      "name": "Exclusive XML Canonicalization Version 1.0",
+      "url": "https://www.w3.org/TR/xml-exc-c14n/",
+      "creator": [
+        {
+          "name": "John Boyer"
+        },
+        {
+          "name": "Donald Eastlake"
+        },
+        {
+          "name": "Joseph Reagle"
+        }
+      ],
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
       "id": "https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/pogramma-van-eisen",
       "type": "TechArticle",
       "name": "Programma van Eisen (PKIoverheid)",
@@ -288,26 +308,6 @@ aanbieders als service afnemers.">
       "url": "https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/toegetreden-vertrouwensdienstverleners",
       "publisher": {
         "name": "Logius"
-      }
-    },
-    {
-      "id": "https://www.w3.org/TR/xml-exc-c14n/",
-      "type": "TechArticle",
-      "name": "Exclusive XML Canonicalization Version 1.0",
-      "url": "https://www.w3.org/TR/xml-exc-c14n/",
-      "creator": [
-        {
-          "name": "John Boyer"
-        },
-        {
-          "name": "Donald Eastlake"
-        },
-        {
-          "name": "Joseph Reagle"
-        }
-      ],
-      "publisher": {
-        "name": "W3C"
       }
     },
     {
@@ -377,8 +377,10 @@ aanbieders als service afnemers.">
 <script id="initialUserConfig" type="application/json">{
   "specStatus": "DEF",
   "specType": "ST",
+  "pubDomain": "dk",
   "shortName": "ebms",
   "publishDate": "2019-05-16",
+  "publishVersion": "3.3",
   "editors": [
     {
       "name": "Logius Centrum voor Standaarden",
@@ -396,8 +398,12 @@ aanbieders als service afnemers.">
   "addSectionLinks": true,
   "a11y": false,
   "maxTocLevel": 4,
-  "pubDomain": "dk",
-  "pubSubDomain": "ebms",
+  "alternateFormats": [
+    {
+      "label": "pdf",
+      "uri": "Digikoppeling-Koppelvlakstandaard-ebMS2.pdf"
+    }
+  ],
   "nl_emailComments": "digikoppeling@logius.nl",
   "nl_addReleaseTagTitle": true,
   "nl_markdownSplitH1sections": true,
@@ -523,8 +529,8 @@ aanbieders als service afnemers.">
       <time class="dt-published" datetime="2019-05-16">16 mei 2019</time>
     </h2>
     <dl>
-      <dt>Deze versie:</dt><dd>
-              <a class="u-url" href="https://publicatie.centrumvoorstandaarden.nl/dk/ebms/def-st-ebms-20190516/">https://publicatie.centrumvoorstandaarden.nl/dk/ebms/def-st-ebms-20190516/</a>
+      <dt>Deze versie:</dt><dd class="status">
+              <a class="u-url status" href="https://publicatie.centrumvoorstandaarden.nl/dk/ebms/3.3">https://publicatie.centrumvoorstandaarden.nl/dk/ebms/3.3</a>
             </dd><dt>Laatst gepubliceerde versie:</dt><dd>
               <a href="https://publicatie.centrumvoorstandaarden.nl/dk/ebms/">https://publicatie.centrumvoorstandaarden.nl/dk/ebms/</a>
             </dd>
@@ -543,14 +549,17 @@ aanbieders als service afnemers.">
   </dd><dd>
     <a href="https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2/issues/">Dien een melding in</a>
   </dd><dd>
-    <a href="https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2/commits">Revisiehistorie</a>
+    <a href="https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2/commits/gh-pages">Revisiehistorie</a>
   </dd><dd>
     <a href="https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2/pulls/">Pull requests</a>
   </dd>
     </dl>
     
     
-    
+    <p>
+          This document is also available in this non-normative format:
+          <a rel="alternate" href="Digikoppeling-Koppelvlakstandaard-ebMS2.pdf">pdf</a>
+        </p>
     <p class="copyright">
           This document is licensed under a
           <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" class="subfoot">Creative Commons Attribution 4.0 License</a>.
@@ -1462,7 +1471,7 @@ te worden samen met de technische specificatie [EBXML-MSG].</p></section></secti
 <tr>
 <td>What canonicalization method(s) must be applied to the data to be signed?</td>
 <td><strong>Not applicable</strong>.</td>
-<td>The use of XML canonicalization is <strong>required</strong>. <cite><a href="https://www.w3.org/TR/xml-exc-c14n/">Exclusive XML Canonicalization Version 1.0</a></cite></td>
+<td>The use of XML canonicalization is <strong>required</strong>. [<cite><a class="bibref" data-link-type="biblio" href="#bib-xml-exc-c14n" title="Exclusive XML Canonicalization Version 1.0">xml-exc-c14n</a></cite>]</td>
 </tr>
 <tr>
 <td>What canonicalization method(s) must be applied to each payload object, if different from above?</td>
