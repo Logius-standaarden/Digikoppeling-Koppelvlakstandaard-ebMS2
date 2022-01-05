@@ -1,8 +1,6 @@
-Inleiding
-=========
+# Inleiding
 
-Doel en doelgroep
------------------
+##Doel en doelgroep
 
 Dit document beschrijft de functionele specificaties voor Digikoppeling ebMS
 Deployment Profile, onderdeel van Digikoppeling.
@@ -23,16 +21,14 @@ aanbieders als service afnemers.
 | [A&D]  | Analyseren & ontwerpen (design) | Analyseren en ontwerpen van oplossings-richtingen. Het verbinden van Business aan de IT.   | **Ja**  |
 | [OT&B] | Ontwikkelen, testen en beheer   | Ontwikkelt, bouwt en configureert de techniek conform specificaties. Zorgen voor beheer na ingebruikname. | **Ja**  |
 
-Opbouw Digikoppeling documentatie
----------------------------------
+## Opbouw Digikoppeling documentatie
 
 Digikoppeling is beschreven in een set van documenten. Deze set is als volgt
 opgebouwd:
 
 ![Opbouw documentatie Digikoppeling](media/DK_Specificatie_structuur.png "Opbouw documentatie Digikoppeling")
 
-Doel en scope van Digikoppeling 
---------------------------------
+## Doel en scope van Digikoppeling 
 
 Digikoppeling biedt de mogelijkheid om op een sterk gestandaardiseerde wijze
 berichten uit te wisselen tussen service aanbieders en service afnemers. De
@@ -71,8 +67,7 @@ middleware.
 
 De architectuur is beschreven in het document [[Digikoppeling Architectuur]].
 
-Koppelvlak & koppelvlakstandaard 
----------------------------------
+## Koppelvlak & koppelvlakstandaard 
 
 Een koppelvlak is een interface die volgens standaarden de gegevensuitwisseling
 verzorgt. Het werken met vaste standaarden is essentieel voor een koppelvlak.
@@ -103,8 +98,7 @@ tezamen nodig is voor een complete generieke Digikoppeling koppelvlakdefinitie
 - interfacedefinitie “on the wire”, (voorbeeld)listing van SOAP headers, en
  informatie over velden en hun specifieke inhoud.
 
-Opbouw van dit document
------------------------
+## Opbouw van dit document
 
 Hoofdstuk 1 bevat een aantal algemene inleidende onderwerpen.
 
@@ -120,11 +114,9 @@ Architectuur]. Deze zit in de Digikoppeling standaarddocumentatie.
 Dit document en andere documentatie is beschikbaar op
 [www.logius.nl/digikoppeling](http://www.logius.nl/digikoppeling)
 
-Koppelvlakstandaard ebMS2
-=========================
+# Koppelvlakstandaard ebMS2
 
-Inleiding
----------
+## Inleiding
 
 Dit document specificeert de Koppelvlakstandaard ebMS2 voor
 berichtenuitwisseling over Digikoppeling (voorheen OverheidsServiceBus) als een
@@ -153,8 +145,7 @@ Protocol Profile and Agreement) [ISO 15000-1]. Wel hebben sommige onderdelen van
 een deployment specificatie gevolgen voor de specifieke invulling van
 CPA-elementen.
 
-Terminologie in dit document
-----------------------------
+##Terminologie in dit document
 
 Dit document biedt organisaties die gebruik gaan maken van Digikoppeling de
 basis voor de configuratie van de ebXML Messaging software. Een correcte
@@ -174,8 +165,7 @@ aangegeven met één van de volgende waardes:
 - **Pending**: voor onderdelen die nog nader onderzocht worden en mogelijk in
  toekomstige versies nader uitgewerkt worden.
 
-Ondersteunde varianten
-----------------------
+## Ondersteunde varianten
 
 De ebXML Messaging 2.0-standaard is de basis van deze specificatie. Deze
 standaard biedt een hogere mate van configureerbaarheid dan in
@@ -252,8 +242,7 @@ n.a. = Not applicable.
 Met betrekking tot CPA-creatie: zie hoofdstuk `todo` 5.1 Deployment and processing and
 requirements for CPAs.
 
-Berichtuitwisselpatronen
-------------------------
+## Berichtuitwisselpatronen
 
 Deze specificatie ondersteunt zowel One Way als Two Way
 bericht-uitwisselpatronen (message exchange patterns, terminologie ontleend aan
@@ -278,8 +267,7 @@ Het heengaande bericht en (in een tweewegsuitwisseling) het teruggaande bericht
 kunnen naar keuze gebruik maken van het Best Effort profiel of het Reliable
 Messaging profiel.
 
-Beveiligingsaspecten
---------------------
+## Beveiligingsaspecten
 
 Deze specificatie maakt gebruik een aantal standaarden op het gebied van
 beveiliging en voldoet op het moment van schrijven aan geldende richtlijnen en
@@ -289,8 +277,7 @@ is het van belang dat deze specificatie regelmatig op geldigheid hiervan wordt
 bezien. De specifieke toegepaste referenties zijn beschreven in het
 [[Digikoppeling Beveiligingsdocument]].
 
-Format van dit document
------------------------
+## Format van dit document
 
 Het OASIS Implementation, Interoperability en Conformance (IIC) Technical
 Committee (TC) heeft voor deployment specificaties een sjabloon opgesteld
@@ -313,8 +300,7 @@ te worden samen met de technische specificatie [EBXML-MSG].
 
 # Profiling the Modules of ebMS 2.0
 
-Core Modules
-------------
+## Core Modules
 
 ### Core Extension Elements [ebMS 2.0] Section 3 
 
@@ -338,11 +324,7 @@ Core Modules
 |**End-to-End Security**|**Optional used** in this profile. See profile Best Effort or profile Reliable Messaging for details|(empty)|
 
 
-
-
-
-Additional Modules
-------------------
+## Additional Modules
 
 ### Reliable Messaging Module [ebMS 2.0] Section 6
 
@@ -392,11 +374,9 @@ Additional Modules
 | Test References | (empty)  |
 | Notes  |   (empty)  |
 
-Profile Requirements Details
-============================
+# Profile Requirements Details
 
-Module: Core Extension Elements
--------------------------------
+## Module: Core Extension Elements
 
 ### Profile Requirement Item: PartyId
 
@@ -725,8 +705,7 @@ Module : Reliable Messaging
 | Test References | (empty) |||
 | Notes  | (empty) |||
 
-Module : Message Status
------------------------
+## Module : Message Status
 
 ### Profile Requirement Item: Status Request message
 
@@ -749,8 +728,7 @@ Module : Message Status
 | Test References | (empty) |
 | Notes  | (empty) |
 
-Module : Ping Service
--------------------------
+## Module : Ping Service
 
 ### Profile Requirement Item: Ping-Pong Security
 
@@ -765,8 +743,7 @@ Module : Ping Service
 | Test References | (empty) |
 | Notes  | (empty) |
 
-Module : Multi-Hop
-------------------
+## Module : Multi-Hop
 
 ### Profile Requirement Item: Use of intermediaries
 
@@ -791,8 +768,7 @@ Module : Multi-Hop
 | Test References | (empty) |
 | Notes  | (empty) |
 
-SOAP Extensions
----------------
+## SOAP Extensions
 
 ### Profile Requirement Item: \#wildCard, Id
 
@@ -805,8 +781,7 @@ SOAP Extensions
 | Test References | (empty) |
 | Notes  | (empty) |
 
-MIME Header Container
--------------------------
+## MIME Header Container
 
 ### Profile Requirement Item: charset
 
@@ -818,8 +793,7 @@ MIME Header Container
 | Test References | (empty) |
 | Notes  | (empty) |
 
-HTTP Binding
-----------------
+## HTTP Binding
 
 ### Profile Requirement Item: HTTP Headers
 
@@ -847,7 +821,7 @@ HTTP Binding
 |[[EBXML-MSG]] Appendix B.2.6 Access Control Header elements| All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
 |Header elements|MIME parts|
-| Which HTTP access control mechanism(s) are required or allowed? [Basic, Digest, or client certificate (the latter only if transport-layer security is used), for example. Refer to item 4.1.4.8 in Security section. | Access control is based on client certificate information only. HTTP Basic or Digest authentication are **not supported**. |
+| Which HTTP access control mechanism(s) are required or allowed? Basic, Digest, or client certificate (the latter only if transport-layer security is used), for example. Refer to item 4.1.4.8 in Security section. | Access control is based on client certificate information only. HTTP Basic or Digest authentication are **not supported**. |
 | Alignment | Appears as AccessAuthentication elements in CPA.   | 
 | Test References | (empty) |
 | Notes  | (empty) |
@@ -868,8 +842,7 @@ HTTP Binding
 | Test References | (empty) |
 | Notes  |   For more information see [[Digikoppeling Beveiligingsdocument]] |
 
-SMTP Binding
-------------
+## SMTP Binding
 
 ### Profile Requirement Item: MIME Headers
 
@@ -882,8 +855,7 @@ SMTP Binding
 | Test References | (empty) |
 | Notes  | (empty) |
 
-Profile Requirement Item: SMTP Confidentiality and Security
----------------------------------------------------------------
+## Profile Requirement Item: SMTP Confidentiality and Security
 
 |[[EBXML-MSG]] Appendix B.3.4, B.3.5| All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
@@ -894,15 +866,13 @@ Profile Requirement Item: SMTP Confidentiality and Security
 | Test References | (empty) |
 | Notes  | (empty) |
 
-Operational Profile
-===================
+# Operational Profile
 
 This section defines the operational aspect of the profile: type of deployment
 with which the profile which is mentioned above is supposed to operate with,
 expected or required conditions of operations, usage context, etc.
 
-Deployment and Processing requirements for CPAs
------------------------------------------------
+## Deployment and Processing requirements for CPAs
 
 || All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
@@ -911,8 +881,7 @@ Deployment and Processing requirements for CPAs
 | Is there a particular format for file names of CPA's, in case that file name is different from CPA-ID value? | No recommendation.   |
 | Others | It is **required** to specify the resulting ebMS collaboration with a CPA. It is **required** that all actions within a CPA make use of (one and) the same default channel for sending acknowledgements. This default channel can only support **one specific profile** within a CPA (for instance either osb-rm-s or osb-rm, not both within one CPA). As a result, when there are actions which are based on different profiles (for instance osb-rm-s and osb-be) and the profiles for the acknowledgements are different as well (for instance osb-rm-s and osb-be), multiple CPA's must be created. |
 
-Security Profile
-----------------
+## Security Profile
 
 || All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
@@ -923,8 +892,7 @@ Security Profile
 | Any particular procedure for doing HTTP authentication, e.g. if exchanging name and password, how? | Besides the client authentication in HTTPS, no additional procedures are applied. |  |   |
 | Others   | (empty) |  
 
-Reliability Profile
--------------------
+## Reliability Profile
 
 || All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
@@ -932,8 +900,7 @@ Reliability Profile
 | Which Reliable Messaging feature combinations are required? [Refer to Section 6.6 of Message Service Specification.]   |   | Reliable Messaging profile 2: Duplicate elimination Yes AckRequested ToPartyMSH Yes AckRequested NextMSH No |   |
 | Others  |   | 
 
-Error Handling Profile
---------------------------
+## Error Handling Profile
 
 |[[EBXML-MSG]] Section 4.2.4.2 | All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
@@ -942,8 +909,7 @@ Error Handling Profile
 | (Appendix B.4) What communication protocol-level error recovery is required, before deferring to Reliable Messaging recovery? [For example, how many retries should occur in the case of failures in DNS, TCP connection, server errors, timeouts; and at what interval?] | Pending.  |
 | Others  |  |
 
-Message Payload and Flow Profile
-------------------------------------
+## Message Payload and Flow Profile
 
 | | All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
@@ -955,15 +921,13 @@ Message Payload and Flow Profile
 | How is each container distinguished from the others? [By a fixed ordering of containers, a fixed Manifest ordering, or specific Content-ID values.]. Any expected relative order of attachments of various types? | No recommendation made.   |
 | Others   |   |
 
-Additional Messaging Features beyond ebMS Specification
--------------------------------------------------------
+## Additional Messaging Features beyond ebMS Specification
 
 | | All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
 | Are there additional features out of specification scope, whichare part of this messaging profile, as an extension to the ebMS profiling? | No. |
 
-Additional Deployment or Operational Requirements
--------------------------------------------------
+## Additional Deployment or Operational Requirements
 
 || All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
