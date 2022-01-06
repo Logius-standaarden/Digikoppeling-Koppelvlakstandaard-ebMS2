@@ -1,6 +1,6 @@
 # Inleiding
 
-##Doel en doelgroep
+## Doel en doelgroep
 
 Dit document beschrijft de functionele specificaties voor Digikoppeling ebMS
 Deployment Profile, onderdeel van Digikoppeling.

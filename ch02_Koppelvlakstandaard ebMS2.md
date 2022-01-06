@@ -29,7 +29,7 @@ Protocol Profile and Agreement) [ISO 15000-1]. Wel hebben sommige onderdelen van
 een deployment specificatie gevolgen voor de specifieke invulling van
 CPA-elementen.
 
-##Terminologie in dit document
+## Terminologie in dit document
 
 Dit document biedt organisaties die gebruik gaan maken van Digikoppeling de
 basis voor de configuratie van de ebXML Messaging software. Een correcte
