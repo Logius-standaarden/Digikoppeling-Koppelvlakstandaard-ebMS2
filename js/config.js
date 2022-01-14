@@ -108,7 +108,7 @@ var respecConfig = {
 
   // in some cases the Repository of a Specification document and the Issue- and PR bases are split
   // thi scan be configured below
-  // if not set, the url's will be generated on the respecConfig.github automatically  
+  // if not set, the url's will be generated on the respecConfig.github automatically
   nl_github: {
     // issueBase: "https://github.com/Geonovum/KP-APIs/issues",
     revision: "https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2/commits",
@@ -116,15 +116,15 @@ var respecConfig = {
   },
 
   // nl_organisationName is used for some company specific values in the header (and Sotd)
-  // currently supported: Logius and Geonovum (default)  
+  // currently supported: Logius and Geonovum (default)
   nl_organisationName: "Logius",
 
   // prefix for the names of company specific css, svg and ico prefixes
-  // defaults to "GN-"  
+  // defaults to "GN-"
   nl_organisationPrefix: "LS-",
 
   // class style can be automatically insertd in generated markdown tables
-  // currently defaults to simple, but this may change    
+  // currently defaults to simple, but this may change
   nl_markdownTableClass: "ebms",
 
   // if nl_markdownEmbedImageInFigure is set to true images in markdown generated content will be surrounded with <figures> element
@@ -150,7 +150,7 @@ var respecConfig = {
     url: "https://www.logius.nl/standaarden",
   },
 
-  // If you need to include a one-off reference that isn't in the SpecRef database or 
+  // If you need to include a one-off reference that isn't in the SpecRef database or
   // if you need to override an existing reference with specific content, then you can use this configuration option.
   localBiblio: {
     NEN3610: {
@@ -162,11 +162,11 @@ var respecConfig = {
       publisher: "Nederlands Normalisatie-instituut",
     },
     "Digikoppeling Architectuur": {
-      href: "https://centrumvoorstandaarden.github.io/Architectuur2.0-metRestfulAPI/static.html",
+      href: "https://publicatie.centrumvoorstandaarden.nl/dk/architectuur/2.0vv/",
       title:
         "Digikoppeling Architectuur",
       authors: ["Logius Centrum voor standaarden"],
-      date: "december 2020",
+      date: "4 Maart 2021",
       publisher: "Logius",
     },
     "ebXML CPPA V 2.0": {
@@ -193,16 +193,16 @@ var respecConfig = {
       publisher: "UN/CEFACT",
     },
     UMMUG: {
-      href: "www.unece.org/fileadmin/DAM/cefact/umm/UMM_userguide_220606.pdf",
+      href: "https://www.unece.org/fileadmin/DAM/cefact/umm/UMM_userguide_220606.pdf",
       title: "UN/CEFACT Modeling Methodology (UMM) User Guide",
       authors: [""],
       date: "2003",
       publisher: "UN/CEFACT",
     },
     "Digikoppeling Beveiligingsdocument": {
-      href: "https://www.logius.nl/sites/default/files/bestanden/website/Digikoppeling_Beveiligingsstandaarden_en_voorschriften_v1.3.pdf",
+      href: "https://publicatie.centrumvoorstandaarden.nl/dk/beveilig/",
       title: "Digikoppeling Beveiligingsstandaarden en voorschriften",
-      date: "2020",
+      date: "1 Februari 2021",
       publisher: "Logius",
     },
     "Deployment Guide 1.1": {
