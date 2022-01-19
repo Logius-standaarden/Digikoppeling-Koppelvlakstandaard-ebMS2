@@ -1,3 +1,5 @@
+![build](https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2/actions/workflows/build.yml/badge.svg)
+
 # Digikoppeling Koppelvlakstandaard ebMS2
 
 - html: https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2/
