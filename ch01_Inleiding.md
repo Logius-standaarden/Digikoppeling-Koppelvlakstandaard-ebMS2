@@ -103,7 +103,7 @@ met een minimum aan benodigde ontwikkelinspanning.
 
 Daarom wordt gekozen voor bewezen interoperabele internationale standaarden.
 
-Digikoppeling maakt berichtenuitwisseling mogelijk op basis van de ebXML/ebMS en
+Digikoppeling maakt berichtenuitwisseling mogelijk op basis van de REST API, ebXML/ebMS en
 WUS-families van standaarden inclusief de daarbij behorende verwante
 standaarden.
 
