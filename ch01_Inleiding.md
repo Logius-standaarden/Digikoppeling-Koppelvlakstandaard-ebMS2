@@ -28,7 +28,6 @@ opgebouwd:
 
 ![Overzicht van de onderdelen van de Digikoppeling Standaard, de standaard is onderverdeeld in normatieve en ondersteunende onderdelen](media/DK_Specificatie_structuur.svg "Opbouw documentatie Digikoppeling")
 
-
 <details>
     <summary> Tekstalternatief </summary>
 <ul>
@@ -74,7 +73,6 @@ opgebouwd:
 <p>* Normatief document</p>
 <p>† Ondersteunend document</p>
 </details>
-
 
 ## Doel en scope van Digikoppeling 
 
