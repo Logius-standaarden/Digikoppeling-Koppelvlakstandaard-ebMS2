@@ -28,7 +28,6 @@ opgebouwd:
 
 ![Overzicht van de onderdelen van de Digikoppeling Standaard, de standaard is onderverdeeld in normatieve en ondersteunende onderdelen](media/DK_Specificatie_structuur.svg "Opbouw documentatie Digikoppeling")
 
-
 <details>
     <summary> Tekstalternatief </summary>
 <ul>
@@ -56,6 +55,8 @@ opgebouwd:
 									<li> <i><a href="https://publicatie.centrumvoorstandaarden.nl/dk/bpebms">Best-practice ebMS2</a></i>† </li>
 								</ul>
 							</li>
+							<li> <a href="https://publicatie.centrumvoorstandaarden.nl/dk/restapi/">DK Koppelvlakstandaard REST API</a>*
+							</li>
 							<li> <a href="https://publicatie.centrumvoorstandaarden.nl/dk/gb/">DK Koppelvlakstandaard Grote Berichten</a>*
 								<ul>
 									<li> <i><a href="https://publicatie.centrumvoorstandaarden.nl/dk/bpgb">Best-practice Grote Berichten</a></i>†</li>
@@ -74,7 +75,6 @@ opgebouwd:
 <p>* Normatief document</p>
 <p>† Ondersteunend document</p>
 </details>
-
 
 ## Doel en scope van Digikoppeling 
 
@@ -103,7 +103,7 @@ met een minimum aan benodigde ontwikkelinspanning.
 
 Daarom wordt gekozen voor bewezen interoperabele internationale standaarden.
 
-Digikoppeling maakt berichtenuitwisseling mogelijk op basis van de ebXML/ebMS en
+Digikoppeling maakt berichtenuitwisseling mogelijk op basis van de REST API, ebXML/ebMS en
 WUS-families van standaarden inclusief de daarbij behorende verwante
 standaarden.
 
