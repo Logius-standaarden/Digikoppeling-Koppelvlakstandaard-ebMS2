@@ -41,7 +41,7 @@ var respecConfig = {
   // An array of person objects describing the editors of the document
   // this can be simple or more elaborated
   editors: [{
-    name: "Logius Centrum voor Standaarden",
+    name: "Logius",
     company: "Logius",
     url: "https://logius.nl/standaarden",
   }
@@ -49,7 +49,7 @@ var respecConfig = {
   // An array of person objects describing the authors of the document
   // this can be simple or more elaborated
   authors: [{
-    name: "Logius Centrum voor Standaarden",
+    name: "Logius",
     url: "https://logius.nl/standaarden",
   }
   ],
