@@ -8,3 +8,4 @@
 | 04-04-2016 | 3.1    | Logius | Referenties naar Beveiligingsvoorschriften aangepast naar nieuwe Document Digikoppeling beveiligingsvoorschrift<br>Requirement Item 4.1.8 (‘Z’ identifier) verwijderd |
 | 01-10-2017 | 3.2    | Logius | Restrictie 1st payload aangepast                                                                                |
 | 16-05-2019 | 3.3    | Logius | Gebruik van SyncReplyMode verruimd                                                                              |
+| 11-04-2022 | 3.3.1  | Logius | Vermelding REST-API koppelvlak                                                                                  |
