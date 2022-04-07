@@ -149,11 +149,10 @@ var respecConfig = {
       publisher: "Nederlands Normalisatie-instituut",
     },
     "Digikoppeling Architectuur": {
-      href: "https://publicatie.centrumvoorstandaarden.nl/dk/architectuur/2.0vv/",
+      href: "https://publicatie.centrumvoorstandaarden.nl/dk/architectuur/",
       title:
         "Digikoppeling Architectuur",
       authors: ["Logius Centrum voor standaarden"],
-      date: "4 Maart 2021",
       publisher: "Logius",
     },
     "ebXML CPPA V 2.0": {
