@@ -20,6 +20,6 @@ var respecConfig = {
   publishDate: "2022-04-11",
   publishVersion: "3.3.1",
   shortName: "ebms",
-  specStatus: "DEF",
+  specStatus: "WV",
   specType: "ST"
 };
