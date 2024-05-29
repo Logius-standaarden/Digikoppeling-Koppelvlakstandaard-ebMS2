@@ -111,15 +111,15 @@ Digikoppeling profielen weer. Ten behoeve van het CPA register is de kolom 'CPA
 Creation' toegevoegd. Voor alle profielen wordt twee-zijdig TLS gebruikt op
 transport niveau (HTTPS).
 
-| Profile Names  | Transport characteristics |  | |  |  | | |
- |---|--------------------------- |---|---------- |---|----------- |---|----------|
-| Digikoppeling ebMS2  | CPA Creation  | 2-zijdig TLS | Reliable | Signed | Encrypted | Attachments | |
-| Best Effort | osb-be  | √   | n.a.  | ―   | ―   | Optional | |
-| Reliable Messaging   | osb-rm  | √   | √  | ―   | ―   | Optional | |
-| End-to-End Security. | Best Effort – Signed   | osb-be-s  | √  | n.a.   | √   | ―  | Optional |
-| | Reliable – Signed   | osb-rm-s  | √  | √   | √   | ―  | Optional |
-| | Best Effort – Encrypted   | osb-be-e  | √  | n.a.   | √   | √  | Optional |
-| | Reliable – Encrypted   | osb-rm-e  | √  | √   | √   | √  | Optional |
+| Profile Names           | Transport characteristics |              |          |        |           |             |
+| ----------------------- | ------------------------- | ------------ | -------- | ------ | --------- | ----------- |
+| Digikoppeling ebMS2     | CPA Creation              | 2-zijdig TLS | Reliable | Signed | Encrypted | Attachments |
+| Best Effort             | osb-be                    | √            | n.a.     | ―      | ―         | Optional    |
+| Reliable Messaging      | osb-rm                    | √            | √        | ―      | ―         | Optional    |
+| Best Effort – Signed    | osb-be-s                  | √            | n.a.     | √      | ―         | Optional    |
+| Reliable – Signed       | osb-rm-s                  | √            | √        | √      | ―         | Optional    |
+| Best Effort – Encrypted | osb-be-e                  | √            | n.a.     | √      | √         | Optional    |
+| Reliable – Encrypted    | osb-rm-e                  | √            | √        | √      | √         | Optional    |
 
 n.a. = Not applicable.
 
