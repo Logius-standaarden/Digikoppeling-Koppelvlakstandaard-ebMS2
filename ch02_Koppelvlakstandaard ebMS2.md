@@ -111,17 +111,18 @@ Digikoppeling profielen weer. Ten behoeve van het CPA register is de kolom 'CPA
 Creation' toegevoegd. Voor alle profielen wordt twee-zijdig TLS gebruikt op
 transport niveau (HTTPS).
 
-| Profile Names  | Transport characteristics |  | |  |  | | |
- |---|--------------------------- |---|---------- |---|----------- |---|----------|
-| Digikoppeling ebMS2  | CPA Creation  | 2-zijdig TLS | Reliable | Signed | Encrypted | Attachments | |
-| Best Effort | osb-be  | √   | n.a.  | ―   | ―   | Optional | |
-| Reliable Messaging   | osb-rm  | √   | √  | ―   | ―   | Optional | |
-| End-to-End Security. | Best Effort – Signed   | osb-be-s  | √  | n.a.   | √   | ―  | Optional |
-| | Reliable – Signed   | osb-rm-s  | √  | √   | √   | ―  | Optional |
-| | Best Effort – Encrypted   | osb-be-e  | √  | n.a.   | √   | √  | Optional |
-| | Reliable – Encrypted   | osb-rm-e  | √  | √   | √   | √  | Optional |
+| Profile Names            | Transport characteristics |              |          |        |           |             |
+| ------------------------ | ------------------------- | ------------ | -------- | ------ | --------- | ----------- |
+| Digikoppeling ebMS2      | CPA Creation              | 2-zijdig TLS | Reliable | Signed | Encrypted | Attachments |
+| Best Effort              | osb-be                    | √            | n.a.     | ―      | ―         | Optional    |
+| Reliable Messaging       | osb-rm                    | √            | √        | ―      | ―         | Optional    |
+| Best Effort – Signed*    | osb-be-s                  | √            | n.a.     | √      | ―         | Optional    |
+| Reliable – Signed*       | osb-rm-s                  | √            | √        | √      | ―         | Optional    |
+| Best Effort – Encrypted* | osb-be-e                  | √            | n.a.     | √      | √         | Optional    |
+| Reliable – Encrypted*    | osb-rm-e                  | √            | √        | √      | √         | Optional    |
 
 n.a. = Not applicable.
+* End-to-End Security
 
 Met betrekking tot CPA-creatie: zie hoofdstuk `todo` 5.1 Deployment and processing and
 requirements for CPAs.
@@ -158,8 +159,8 @@ beveiliging en voldoet op het moment van schrijven aan geldende richtlijnen en
 best practices. Aangezien in de loop der tijd kwetsbaarheden kunnen worden
 ontdekt in de cryptografische algoritmen waarop deze standaarden zijn gebaseerd,
 is het van belang dat deze specificatie regelmatig op geldigheid hiervan wordt
-bezien. De specifieke toegepaste referenties zijn beschreven in het
-[[Digikoppeling Beveiligingsdocument]].
+bezien. De specifieke toegepaste referenties zijn beschreven in 
+[[[DK-beveiliging]]].
 
 ## Format van dit document
 

@@ -145,13 +145,13 @@ Module: Security
 | Are additional Signature elements required, by whom, and what should they reference?  | **Not applicable**.   | **Never used** in this profile. |   |
 | What canonicalization method(s) must be applied to the data to be signed? | **Not applicable**.   | The use of XML canonicalization is **required**. [[xml-exc-c14n]] |
 | What canonicalization method(s) must be applied to each payload object, if different from above?  | **Not applicable**.   | **Not applicable**.  |
-| What signature method(s) must be applied?   | **Not applicable**.   | The applied signature method is described in [[Digikoppeling Beveiligingsdocument]]  |   |
-| What Certificate Authorities (issuers) are allowed or required for signing certificates? | **Not applicable**.   | The use of PKI Overheid certificates is **required** in which an OIN is used in the Subject.serialNumber. [[Digikoppeling Beveiligingsdocument]] |   |
+| What signature method(s) must be applied?   | **Not applicable**.   | The applied signature method is described in [[[DK-beveiliging]]]  |   |
+| What Certificate Authorities (issuers) are allowed or required for signing certificates? | **Not applicable**.   | The use of PKI Overheid certificates is **required** in which an OIN is used in the Subject.serialNumber. [[[DK-beveiliging]]] |   |
 | Are direct-trusted (or self-signed) signing certificates allowed?   | **Not applicable**.   | This profile is **never used**. Only used in testing and Proof of Concept environments   |   |
-| What certificate verification policies and procedures must be followed?   | The requirements as stated by the PKIOverheid [[PKI Policy]] have to be used. The use of certificate revocation lists (CRL) from the trusted CA's is required.   |The requirements as stated by the PKIOverheid [[PKI Policy]] have to be used. The use of certificate revocation lists (CRL) from the trusted CA's is required.|
+| What certificate verification policies and procedures must be followed?   | The requirements as stated in [[[PKIO-PvE]]] have to be used. The use of certificate revocation lists (CRL) from the trusted CAs is required.   |The requirements as stated in [[[PKIO-PvE]]] have to be used. The use of certificate revocation lists (CRL) from the trusted CA's is required.|
 | Alignment|(a) Appears as BusinessTransactionCharacteristics/\@isAuthenticated=persistent and BusinessTransactionCharacteristics/\@isTamperProof=persistent in CPA | |
 | Test References | (empty)  | (empty)  |
-| Notes  | Applications submitting data to, or receiving data from, Digikoppeling ebXML Message service handlers can perform signing at the message payload level. The ebXML Messaging protocol is payload-neutral and therefore supports signed payloads. In that case, the Digikoppeling is not aware of the presence of signatures and does not perform signature verification. | for more information see [[Digikoppeling Beveiligingsdocument]] |   |
+| Notes  | Applications submitting data to, or receiving data from, Digikoppeling ebXML Message service handlers can perform signing at the message payload level. The ebXML Messaging protocol is payload-neutral and therefore supports signed payloads. In that case, the Digikoppeling is not aware of the presence of signatures and does not perform signature verification. | for more information see [[[DK-beveiliging]]] |   |
 
 ### Profile Requirement Item: Persistent Signed Receipt
 
@@ -168,10 +168,10 @@ Module: Security
 
 |[[EBXML-MSG]]Section 4.1.4.3 Non Persistent Authentication | All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
-| Are communication channel authentication methods required? [Yes, for Security Services Profiles 2-5.] Which methods are allowed or required? | Client and Server authentication is required using HTTPS and TLS. The currently allowed protocol versions for TLS are described in the [[Digikoppeling Beveiligingsdocument]] `Note:` Message service handlers **should NOT** be able to operate in SSL v3 backward compatibility mode. |
+| Are communication channel authentication methods required? [Yes, for Security Services Profiles 2-5.] Which methods are allowed or required? | Client and Server authentication is required using HTTPS and TLS. The currently allowed protocol versions for TLS are described in [[[DK-beveiliging]]] `Note:` Message service handlers **should NOT** be able to operate in SSL v3 backward compatibility mode. |
 | Alignment | [Appears as BusinessTransactionCharacteristics/\@isAuthenticated=transient in CPA.] |
 | Test References | (empty) |
-| Notes  | for more information see [[Digikoppeling Beveiligingsdocument]]  |
+| Notes  | for more information see [[[DK-beveiliging]]]  |
 
 ### Profile Requirement Item: Non Persistent Integrity
 
@@ -189,7 +189,7 @@ Module: Security
 |[[EBXML-MSG]] Section 4.1.4.1 Section 4.1.4.5 Persistent Confidentiality| **Best effort**<br>**Reliable Messaging**|**End-to-End Security** |
 |------------------|---|---|
 |Header elements:<br>`/SOAP:Header/eb:Signature`|||
-| Is selective confidentiality of elements within an ebXML Message SOAP Header required? If so, how is this to be accomplished? [Not addressed by Messaging Specification 2.0.] | **Not applicable**.  | **Not applicable**. | Is payload confidentiality (encryption) required? [Yes, for Security Services Profiles 13, 14, 16, 17, 21, 22.] Which methods are allowed or required?   | **Not applicable**.  | Payload confidentiality is **optional**. The [[Digikoppeling Beveiligingsdocument]] describes what security standard must be used. |
+| Is selective confidentiality of elements within an ebXML Message SOAP Header required? If so, how is this to be accomplished? [Not addressed by Messaging Specification 2.0.] | **Not applicable**.  | **Not applicable**. | Is payload confidentiality (encryption) required? [Yes, for Security Services Profiles 13, 14, 16, 17, 21, 22.] Which methods are allowed or required?   | **Not applicable**.  | Payload confidentiality is **optional**. [[[DK-beveiliging]]] describes what security standard must be used. |
 | Alignment | [Appears as BusinessTransactionCharacteristics/\@isConfidential=persistent in CPA.]   |  
 | Test References | (empty)| (empty)  |
 | Notes  | Applications submitting data to, or receiving data from, Digikoppeling message handlers can perform encryption at the payload processing level. The ebXML Messaging protocol is payload-neutral and therefore supports transport of encrypted payloads. However, any encryption and decryption of payloads is out of scope for these profiles. |
@@ -199,10 +199,10 @@ Module: Security
 |[[EBXML-MSG]] Section 4.1.4.6 Non Persistent Confidentiality| All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
 |Header element(s)|`/SOAP:Header/eb:Signature`|
-| Are communication channel confidentiality methods required? [Yes, for Security Services Profiles 3, 6, 8, 11, 12.] Which methods are allowed or required? | The use of HTTPS and TLS is required. The currently allowed protocol versions for TLS are described in the [[Digikoppeling Beveiligingsdocument]] Message service handlers **should NOT** support SSL v3 compatibility mode. |
+| Are communication channel confidentiality methods required? [Yes, for Security Services Profiles 3, 6, 8, 11, 12.] Which methods are allowed or required? | The use of HTTPS and TLS is required. The currently allowed protocol versions for TLS are described in  [[[DK-beveiliging]]] Message service handlers **should NOT** support SSL v3 compatibility mode. |
 | Alignment | [Appears as BusinessTransactionCharacteristics/\@isConfidential=transient in CPA.]   | |
 | Test References | (empty) |
-| Notes  |  For more information see [[Digikoppeling Beveiligingsdocument]]  |
+| Notes  |  For more information see [[[DK-beveiliging]]]  |
 
 ### Profile Requirement Item: Persistent Authorization
 
@@ -455,16 +455,16 @@ Module : Reliable Messaging
 |[[EBXML-MSG]] Appendix B.2.7 Confidentiality and Transport Protocol Level Security| All profiles:<br> **Best effort**,<br>**Reliable Messaging**,<br>**End-to-End Security** |
 |------------------|---|
 |Header elements|MIME parts |
-| Is HTTP transport-layer encryption required? What protocol version(s)? [SSLv3, TLSv1, for example. Refer to item 4.1.4.6 in Security section.] | Encryption is based on HTTPS and TLS. The currently allowed protocol versions for TLS are described in the [[Digikoppeling Beveiligingsdocument]] Note: TLS implementations **must NOT** support SSL v3 backwards compatiblity mode. |
-| What encryption algorithm(s) and minimum key lengths are required?  | The currently allowed protocol versions for TLS are described in the [[Digikoppeling Beveiligingsdocument]]  |
-| What Certificate Authorities are acceptable for server certificate authentication? | PKI overheid maintains a list of approved trusted service providers [[PKI CA]].   |
+| Is HTTP transport-layer encryption required? What protocol version(s)? [SSLv3, TLSv1, for example. Refer to item 4.1.4.6 in Security section.] | Encryption is based on HTTPS and TLS. The currently allowed protocol versions for TLS are described in [[[DK-beveiliging]]] Note: TLS implementations **must NOT** support SSL v3 backwards compatiblity mode. |
+| What encryption algorithm(s) and minimum key lengths are required?  | The currently allowed protocol versions for TLS are described in [[[DK-beveiliging]]]  |
+| What Certificate Authorities are acceptable for server certificate authentication? | PKI overheid maintains a list of approved trusted service providers [[[PKI-CA]]].   |
 | Are direct-trust (self-signed) server certificates allowed?   | Self-signed certificates are only allowed in test cases.   |
 | Is client-side certificate-based authentication allowed or required?   | Client-side authentication is required.  |
-| What client Certificate Authorities are acceptable?  | PKI overheid maintains a list of approved trusted service providers [[PKI CA]].   |
-| What certificate verification policies and procedures must be followed?   | PKI overheid procedures are described in [[PKI Policy]]. The use of certificate revocation lists (CRL) from the trusted CA's is required.  |
+| What client Certificate Authorities are acceptable?  | PKI overheid maintains a list of approved trusted service providers [[[PKI-CA]]].   |
+| What certificate verification policies and procedures must be followed?   | PKI overheid procedures are described in [[[PKIO-PvE]]]. The use of certificate revocation lists (CRL) from the trusted CA's is required.  |
 | Alignment | (empty) |
 | Test References | (empty) |
-| Notes  |   For more information see [[Digikoppeling Beveiligingsdocument]] |
+| Notes  |   For more information see [[[DK-beveiliging]]] |
 
 ## SMTP Binding
 

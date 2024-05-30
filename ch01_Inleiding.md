@@ -113,7 +113,7 @@ beschikken over eigen middleware (ESB, broker) kunnen de aansluiting aan
 Digikoppeling, de adapters, in het algemeen realiseren via voorzieningen in die
 middleware.
 
-De architectuur is beschreven in het document [[Digikoppeling Architectuur]].
+De architectuur is beschreven in het document [[[DK-Architectuur]]].
 
 ## Koppelvlak & koppelvlakstandaard 
 
