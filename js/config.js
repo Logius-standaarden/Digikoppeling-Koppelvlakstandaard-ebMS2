@@ -15,10 +15,10 @@ var respecConfig = {
   github: "https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2",
   maxTocLevel: 4,
   previousPublishDate: "2019-05-16",
-  previousPublishVersion: "3.3",
+  previousPublishVersion: "3.3.1",
   pubDomain: "dk",
   publishDate: "2022-04-11",
-  publishVersion: "3.3.1",
+  publishVersion: "3.3.2",
   shortName: "ebms",
   specStatus: "WV",
   specType: "ST"
