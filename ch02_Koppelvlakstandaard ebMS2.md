@@ -124,8 +124,7 @@ transport niveau (HTTPS).
 N/A = Not applicable<br>
 <sup>1</sup> End-to-End Security
 
-Met betrekking tot CPA-creatie: zie hoofdstuk `todo` 5.1 Deployment and processing and
-requirements for CPAs.
+Met betrekking tot CPA-creatie: zie [[[#deployment-and-processing-requirements-for-cpas]]].
 
 ## Berichtuitwisselpatronen
 
