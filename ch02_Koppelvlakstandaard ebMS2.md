@@ -111,21 +111,20 @@ Digikoppeling profielen weer. Ten behoeve van het CPA register is de kolom 'CPA
 Creation' toegevoegd. Voor alle profielen wordt twee-zijdig TLS gebruikt op
 transport niveau (HTTPS).
 
-| Profile Names            | Transport characteristics |              |          |        |           |             |
-| ------------------------ | ------------------------- | ------------ | -------- | ------ | --------- | ----------- |
-| Digikoppeling ebMS2      | CPA Creation              | 2-zijdig TLS | Reliable | Signed | Encrypted | Attachments |
-| Best Effort              | osb-be                    | √            | n.a.     | ―      | ―         | Optional    |
-| Reliable Messaging       | osb-rm                    | √            | √        | ―      | ―         | Optional    |
-| Best Effort – Signed*    | osb-be-s                  | √            | n.a.     | √      | ―         | Optional    |
-| Reliable – Signed*       | osb-rm-s                  | √            | √        | √      | ―         | Optional    |
-| Best Effort – Encrypted* | osb-be-e                  | √            | n.a.     | √      | √         | Optional    |
-| Reliable – Encrypted*    | osb-rm-e                  | √            | √        | √      | √         | Optional    |
+| Profile Names                       | Transport characteristics |              |          |        |           |             |
+| ----------------------------------- | ------------------------- | ------------ | -------- | ------ | --------- | ----------- |
+| Digikoppeling ebMS2                 | CPA Creation              | 2-zijdig TLS | Reliable | Signed | Encrypted | Attachments |
+| Best Effort                         | osb-be                    | √            | N/A      | ―      | ―         | Optional    |
+| Reliable Messaging                  | osb-rm                    | √            | √        | ―      | ―         | Optional    |
+| Best Effort – Signed<sup>1</sup>    | osb-be-s                  | √            | N/A      | √      | ―         | Optional    |
+| Reliable – Signed<sup>1</sup>       | osb-rm-s                  | √            | √        | √      | ―         | Optional    |
+| Best Effort – Encrypted<sup>1</sup> | osb-be-e                  | √            | N/A      | √      | √         | Optional    |
+| Reliable – Encrypted<sup>1</sup>    | osb-rm-e                  | √            | √        | √      | √         | Optional    |
 
-n.a. = Not applicable.
-* End-to-End Security
+N/A = Not applicable<br>
+<sup>1</sup> End-to-End Security
 
-Met betrekking tot CPA-creatie: zie hoofdstuk `todo` 5.1 Deployment and processing and
-requirements for CPAs.
+Met betrekking tot CPA-creatie: zie [[[#deployment-and-processing-requirements-for-cpas]]].
 
 ## Berichtuitwisselpatronen
 
