@@ -1,4 +1,6 @@
-var respecConfig = {
+import { loadRespecWithConfiguration } from "https://logius-standaarden.github.io/publicatie/respec/organisation-config.mjs";
+
+loadRespecWithConfiguration({
   alternateFormats: [ { 
         "label" : "pdf",
         "uri" : "Digikoppeling-Koppelvlakstandaard-ebMS2.pdf"
@@ -22,4 +24,4 @@ var respecConfig = {
   shortName: "ebms",
   specStatus: "WV",
   specType: "ST"
-};
+});
